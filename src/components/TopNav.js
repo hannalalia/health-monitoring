@@ -1,0 +1,25 @@
+import React from 'react';
+import {Navbar,NavDropdown, Nav} from 'react-bootstrap';
+
+function TopNav(){
+    return(
+    <Navbar bg="light" expand="lg">
+        <Navbar.Brand href="#home">NNC</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#link">Health Status</Nav.Link>
+            <Nav.Link href="#link">Exposure Reports</Nav.Link>
+            <Nav.Link href="#link">RT PCR Tests</Nav.Link>
+            <NavDropdown title="Employee Name" id="basic-nav-dropdown">
+            <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.2">Logout</NavDropdown.Item>
+            </NavDropdown>
+        </Nav>
+        </Navbar.Collapse>
+    </Navbar>
+  )
+}
+
+export default TopNav;
