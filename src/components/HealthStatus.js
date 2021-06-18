@@ -1,9 +1,9 @@
 import React, {useMemo} from 'react';
 import {Table} from 'react-bootstrap';
-import {useTable,useSortBy} from 'react-table';
+import {useTable,useSortBy, useGlobalFilter} from 'react-table';
 import { MdExpandMore,MdExpandLess } from "react-icons/md";
 import { BiSort } from "react-icons/bi";
-
+import GlobalFilter from './GlobalFilter';
 
 function HealthStatus() {
     const data = useMemo(
@@ -63,16 +63,21 @@ function HealthStatus() {
         ],
         []
       )
-    const tableInstance = useTable({ columns, data }, useSortBy);
+    const tableInstance = useTable({ columns, data }, useGlobalFilter,useSortBy);
     const {
         getTableProps,
         getTableBodyProps,
         headerGroups,
         rows,
         prepareRow,
+        state,
+        setGlobalFilter
       } = tableInstance
+
+    const {globalFilter} = state;
     return (   
     <div>
+        <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter}></GlobalFilter>
         <h3 className="my-3">List of Daily Health Status</h3>
         <Table striped bordered className="my-3"{...getTableProps()}>
             <thead>
