@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "date": "June 17, 2021",
+        "fever": false
+    },
+    {
+        "id": 2,
+        "date": "June 16, 2021",
+        "fever": false
+    },
+    {
+        "id": 3,
+        "date": "June 18, 2021",
+        "fever": true
+    },
+    {
+        "id": 4,
+        "date": "June 19, 2021",
+        "fever": true
+    },
+    {
+        "id": 5,
+        "date": "June 20, 2021",
+        "fever": false
+    },
+    {
+        "id": 6,
+        "date": "June 21, 2021",
+        "fever": false
+    },
+    {
+        "id": 7,
+        "date": "June 22, 2021",
+        "fever": false
+    }
+]
