@@ -55,7 +55,10 @@ function HealthStatus() {
           },
           {
             Header: 'Fever',
-            accessor: 'fever'
+            accessor: 'fever',
+            Cell:({value})=>{
+                return value ? "Yes":"No"
+            }
           },
         ],
         []
