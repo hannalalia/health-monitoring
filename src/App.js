@@ -10,17 +10,19 @@ function App() {
   return (
     <div className="App">
       <Container className="mb-2">
+      <TopNav></TopNav>
         <Router>
-          <TopNav></TopNav>
           <Switch>
             <Route exact path="/">
               <Dashboard></Dashboard>
             </Route>
             <Route exact path="/Health">
-              <HealthStatus></HealthStatus>
+              <HealthStatus>
+                
+              </HealthStatus>
             </Route>
           </Switch>
-        </Router>      
+        </Router>     
       </Container>
     </div>
   );
