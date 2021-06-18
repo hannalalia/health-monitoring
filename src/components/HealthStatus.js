@@ -176,6 +176,8 @@ function HealthStatus() {
           {
             Header: 'Fever',
             accessor: 'fever',
+            disableFilters: true,
+            disableSortBy: true,
             Cell:({value})=>{
                 return value ? "Yes":"No"
             }
@@ -228,7 +230,7 @@ function HealthStatus() {
                     <th {...column.getHeaderProps(column.getSortByToggleProps())}>
                         {column.render('Header')}
                         <span>
-                            {column.isSorted ? (column.isSortedDesc ? (<MdExpandMore/>): (<MdExpandLess/>)):(<BiSort/>) }
+                            {column.canSort? (column.isSorted ? (column.isSortedDesc ? (<MdExpandMore/>): (<MdExpandLess/>)):(<BiSort/>)):'' }
                         </span>
                         
                     </th>
