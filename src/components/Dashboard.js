@@ -5,8 +5,6 @@ import TopNav from './TopNav';
 function Dashboard(){
     return(
         <div>
-            <Container className="mb-2">
-                <TopNav></TopNav>
                 <Row>
                     <Col xl={4}>
                         <Card className="my-3">
@@ -123,7 +121,6 @@ function Dashboard(){
                         </Row>
                     </Col>
                 </Row>               
-            </Container>
         </div>
     )
 }
