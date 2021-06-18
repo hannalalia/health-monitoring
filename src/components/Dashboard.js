@@ -5,7 +5,7 @@ import TopNav from './TopNav';
 function Dashboard(){
     return(
         <div>
-            <Container >
+            <Container className="mb-2">
                 <TopNav></TopNav>
                 <Row>
                     <Col xl={4}>
@@ -44,10 +44,10 @@ function Dashboard(){
                     </Col>
                     <Col>
                         <Row>
-                            <Col>
-                                <Card className="my-3 bg-dark text-light">
+                            <Col lg={6} md={12}>
+                                <Card className="my-3 bg-success text-light">
                                 <Card.Body>
-                                    <img className="float-left mr-3"style={{maxWidth:"100px"}}src="https://picsum.photos/500/500"/>
+                                    <img className="float-left mr-3 d-none d-sm-block"style={{maxWidth:"100px"}}src="https://picsum.photos/500/500"/>
                                     <Card.Title >List of Daily Health Status</Card.Title>
                                     <Card.Text >
                                     Number of Entries: 0
@@ -55,10 +55,10 @@ function Dashboard(){
                                 </Card.Body>
                                 </Card>
                             </Col>
-                            <Col>
+                            <Col lg={6} md={12}>
                                 <Card className="my-3 bg-danger text-light">
                                 <Card.Body>
-                                    <img className="float-left mr-3"style={{maxWidth:"100px"}}src="https://picsum.photos/500/500"/>
+                                    <img className="float-left mr-3 d-none d-sm-block"style={{maxWidth:"100px"}}src="https://picsum.photos/500/500"/>
                                     <Card.Title >List of Exposure Reports</Card.Title>
                                     <Card.Text>
                                     Number of Entries: 0
@@ -68,21 +68,21 @@ function Dashboard(){
                             </Col>   
                         </Row>
                         <Row>
-                            <Col>
+                            <Col lg={6} md={12}>
                                 <Card className="my-3 bg-primary text-light">
                                 <Card.Body>
-                                    <img className="float-left mr-3"style={{maxWidth:"100px"}}src="https://picsum.photos/500/500"/>
-                                    <Card.Title >List of RT-PCR TestsS</Card.Title>
+                                    <img className="float-left mr-3 d-none d-sm-block"style={{maxWidth:"100px"}}src="https://picsum.photos/500/500"/>
+                                    <Card.Title >List of RT-PCR Tests</Card.Title>
                                     <Card.Text >
                                     Number of Entries: 0
                                     </Card.Text>
                                 </Card.Body>
                                 </Card>
                             </Col>
-                            <Col>
+                            <Col lg={6} md={12}>
                                 <Card className="my-3 bg-warning text-light">
                                 <Card.Body>
-                                    <img className="float-left mr-3"style={{maxWidth:"100px"}}src="https://picsum.photos/500/500"/>
+                                    <img className="float-left mr-3 d-none d-sm-block"style={{maxWidth:"100px"}}src="https://picsum.photos/500/500"/>
                                     <Card.Title >List of Travel Reports</Card.Title>
                                     <Card.Text>
                                     Number of Entries: 0
@@ -119,14 +119,10 @@ function Dashboard(){
                                     </Accordion.Collapse>
                                 </Card>
                             </Accordion>
-                            </Col>
-                             
+                            </Col>                             
                         </Row>
                     </Col>
-                </Row>
-                
-                
-               
+                </Row>               
             </Container>
         </div>
     )
