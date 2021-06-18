@@ -1,6 +1,6 @@
 import React, {useMemo} from 'react';
-import {Table} from 'react-bootstrap';
-import {useTable,useSortBy, useGlobalFilter} from 'react-table';
+import {Table,Button} from 'react-bootstrap';
+import {useTable,useSortBy, useGlobalFilter, usePagination} from 'react-table';
 import { MdExpandMore,MdExpandLess } from "react-icons/md";
 import { BiSort } from "react-icons/bi";
 import GlobalFilter from './GlobalFilter';
@@ -42,6 +42,36 @@ function HealthStatus() {
                 "id": 7,
                 "date": "June 22, 2021",
                 "fever": false
+            },
+            {
+                "id": 8,
+                "date": "June 20, 2021",
+                "fever": false
+            },
+            {
+                "id": 9,
+                "date": "June 21, 2021",
+                "fever": false
+            },
+            {
+                "id": 10,
+                "date": "June 22, 2021",
+                "fever": false
+            },
+            {
+                "id": 11,
+                "date": "June 20, 2021",
+                "fever": false
+            },
+            {
+                "id": 12,
+                "date": "June 21, 2021",
+                "fever": false
+            },
+            {
+                "id": 13,
+                "date": "June 22, 2021",
+                "fever": false
             }
         ],
         []
@@ -51,7 +81,7 @@ function HealthStatus() {
         () => [
           {
             Header: 'Date',
-            accessor: 'date', 
+            accessor: 'date'
           },
           {
             Header: 'Fever',
@@ -63,12 +93,14 @@ function HealthStatus() {
         ],
         []
       )
-    const tableInstance = useTable({ columns, data }, useGlobalFilter,useSortBy);
+    const tableInstance = useTable({ columns, data },useGlobalFilter,useSortBy,usePagination);
     const {
         getTableProps,
         getTableBodyProps,
         headerGroups,
-        rows,
+        page,
+        nextPage,
+        previousPage,
         prepareRow,
         state,
         setGlobalFilter
@@ -91,6 +123,7 @@ function HealthStatus() {
                         <span>
                             {column.isSorted ? (column.isSortedDesc ? (<MdExpandMore/>): (<MdExpandLess/>)):(<BiSort/>) }
                         </span>
+                        
                     </th>
                     ))
                 }
@@ -100,7 +133,7 @@ function HealthStatus() {
             </thead>
             <tbody  {...getTableBodyProps()}>
             {
-                rows.map(row => {
+                page.map(row => {
                     prepareRow(row)
                     return (
                     <tr {...row.getRowProps()}>
@@ -121,6 +154,10 @@ function HealthStatus() {
             }            
             </tbody>
         </Table>
+        <div>
+            <Button variant="info mx-2" size="sm" onClick={()=>previousPage()}>Previous</Button>
+            <Button variant="info mx-2" size="sm" onClick={()=>nextPage()}>Next</Button>
+        </div>
     </div> 
     );
 }
