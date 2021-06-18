@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Table} from 'react-bootstrap';
 function HealthStatus() {
     return (   
     <div>
