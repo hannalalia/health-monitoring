@@ -1,5 +1,5 @@
 import React, {useMemo} from 'react';
-import {Table,Button} from 'react-bootstrap';
+import {Table,Button, Form} from 'react-bootstrap';
 import {useTable,useSortBy, useGlobalFilter, usePagination} from 'react-table';
 import { MdExpandMore,MdExpandLess } from "react-icons/md";
 import { BiSort } from "react-icons/bi";
@@ -72,6 +72,96 @@ function HealthStatus() {
                 "id": 13,
                 "date": "June 22, 2021",
                 "fever": false
+            },
+            {
+                "id": 8,
+                "date": "June 20, 2021",
+                "fever": false
+            },
+            {
+                "id": 9,
+                "date": "June 21, 2021",
+                "fever": false
+            },
+            {
+                "id": 10,
+                "date": "June 22, 2021",
+                "fever": false
+            },
+            {
+                "id": 11,
+                "date": "June 20, 2021",
+                "fever": false
+            },
+            {
+                "id": 12,
+                "date": "June 21, 2021",
+                "fever": false
+            },
+            {
+                "id": 13,
+                "date": "June 22, 2021",
+                "fever": false
+            },
+            {
+                "id": 8,
+                "date": "June 20, 2021",
+                "fever": false
+            },
+            {
+                "id": 9,
+                "date": "June 21, 2021",
+                "fever": false
+            },
+            {
+                "id": 10,
+                "date": "June 22, 2021",
+                "fever": false
+            },
+            {
+                "id": 11,
+                "date": "June 20, 2021",
+                "fever": false
+            },
+            {
+                "id": 12,
+                "date": "June 21, 2021",
+                "fever": false
+            },
+            {
+                "id": 13,
+                "date": "June 22, 2021",
+                "fever": false
+            },
+            {
+                "id": 8,
+                "date": "June 20, 2021",
+                "fever": false
+            },
+            {
+                "id": 9,
+                "date": "June 21, 2021",
+                "fever": false
+            },
+            {
+                "id": 10,
+                "date": "June 22, 2021",
+                "fever": false
+            },
+            {
+                "id": 11,
+                "date": "June 20, 2021",
+                "fever": false
+            },
+            {
+                "id": 12,
+                "date": "June 21, 2021",
+                "fever": false
+            },
+            {
+                "id": 13,
+                "date": "June 22, 2021",
+                "fever": false
             }
         ],
         []
@@ -103,16 +193,31 @@ function HealthStatus() {
         previousPage,
         canNextPage, 
         canPreviousPage,
+        pageOptions,
+        gotoPage,
+        setPageSize,
+        pageCount,
         prepareRow,
         state,
         setGlobalFilter
       } = tableInstance
 
-    const {globalFilter} = state;
+    const {globalFilter, pageIndex,pageSize} = state;
+    
     return (   
     <div>       
         <h3 className="my-3">List of Daily Health Status</h3>
-        <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter}></GlobalFilter>
+        <div className="d-flex justify-content-between">
+            <Form.Control as="select" className="w-25" value={pageSize} onChange={(e)=>setPageSize(Number(e.target.value))}>
+            {
+                    [10,25,50,100].map(pageSize=>(
+                        <option key={pageSize} value={pageSize}> Show {pageSize} entries</option>
+                    ))
+                }
+            </Form.Control>
+            <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter}></GlobalFilter>
+        </div>
+        
         <Table striped bordered className="my-3"{...getTableProps()}>
             <thead>
             {
@@ -156,9 +261,26 @@ function HealthStatus() {
             }            
             </tbody>
         </Table>
-        <div>
-            <Button variant="info mx-2" size="sm" onClick={()=>previousPage()} disabled = {!canPreviousPage}>Previous</Button>
-            <Button variant="info mx-2" size="sm" onClick={()=>nextPage()} disabled ={!canNextPage}>Next</Button>
+        <div className="d-flex justify-content-between">
+            <span>
+                Page{' '}
+                    {pageIndex + 1} of {pageOptions.length}
+            </span>  
+            <div>
+                <Button variant="info mx-2" size="sm" onClick={()=>gotoPage(0)} disabled={!canPreviousPage}>{'First'}</Button>
+                    {   
+                        
+                        pageOptions.map(index =>{
+                            if(pageOptions.length>2){
+                                return(<Button variant="info mx-2" size="sm"
+                                onClick={(e)=>{
+                                    gotoPage(index);
+                                }}>{index+1}</Button>)
+                            }
+                        })
+                    }
+                <Button variant="info mx-2" size="sm" onClick={()=>gotoPage(pageCount-1)} disabled={!canNextPage}>{'Last'}</Button>
+            </div>              
         </div>
     </div> 
     );
