@@ -209,8 +209,8 @@ function HealthStatus() {
     return (   
     <div>       
         <h3 className="my-3">List of Daily Health Status</h3>
-        <div className="d-flex justify-content-between">
-            <Form.Control as="select" className="w-25" value={pageSize} onChange={(e)=>setPageSize(Number(e.target.value))}>
+        <div className="mx-2 row justify-content-between">
+            <Form.Control as="select" className="my-2 col-12 col-sm-3" value={pageSize} onChange={(e)=>setPageSize(Number(e.target.value))}>
             {
                     [10,25,50,100].map(pageSize=>(
                         <option key={pageSize} value={pageSize}> Show {pageSize} entries</option>
