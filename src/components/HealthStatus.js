@@ -101,6 +101,8 @@ function HealthStatus() {
         page,
         nextPage,
         previousPage,
+        canNextPage, 
+        canPreviousPage,
         prepareRow,
         state,
         setGlobalFilter
@@ -155,8 +157,8 @@ function HealthStatus() {
             </tbody>
         </Table>
         <div>
-            <Button variant="info mx-2" size="sm" onClick={()=>previousPage()}>Previous</Button>
-            <Button variant="info mx-2" size="sm" onClick={()=>nextPage()}>Next</Button>
+            <Button variant="info mx-2" size="sm" onClick={()=>previousPage()} disabled = {!canPreviousPage}>Previous</Button>
+            <Button variant="info mx-2" size="sm" onClick={()=>nextPage()} disabled ={!canNextPage}>Next</Button>
         </div>
     </div> 
     );
