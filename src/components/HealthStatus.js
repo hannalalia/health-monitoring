@@ -3,7 +3,6 @@ import {Table} from 'react-bootstrap';
 import {useTable} from 'react-table';
 
 
-
 function HealthStatus() {
     const data = useMemo(
         () => [
@@ -69,7 +68,8 @@ function HealthStatus() {
       } = tableInstance
     return (   
     <div>
-        <Table striped bordered {...getTableProps()}>
+        <h3 className="my-3">List of Daily Health Status</h3>
+        <Table striped bordered className="my-3"{...getTableProps()}>
             <thead>
             {
                 headerGroups.map(headerGroup => (
