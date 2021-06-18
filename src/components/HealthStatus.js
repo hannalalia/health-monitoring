@@ -76,9 +76,9 @@ function HealthStatus() {
 
     const {globalFilter} = state;
     return (   
-    <div>
-        <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter}></GlobalFilter>
+    <div>       
         <h3 className="my-3">List of Daily Health Status</h3>
+        <GlobalFilter filter={globalFilter} setFilter={setGlobalFilter}></GlobalFilter>
         <Table striped bordered className="my-3"{...getTableProps()}>
             <thead>
             {
