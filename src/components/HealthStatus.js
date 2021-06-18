@@ -1,6 +1,8 @@
 import React, {useMemo} from 'react';
 import {Table} from 'react-bootstrap';
-import {useTable} from 'react-table';
+import {useTable,useSortBy} from 'react-table';
+import { MdExpandMore,MdExpandLess } from "react-icons/md";
+import { BiSort } from "react-icons/bi";
 
 
 function HealthStatus() {
@@ -53,12 +55,12 @@ function HealthStatus() {
           },
           {
             Header: 'Fever',
-            accessor: 'fever',
+            accessor: 'fever'
           },
         ],
         []
       )
-    const tableInstance = useTable({ columns, data });
+    const tableInstance = useTable({ columns, data }, useSortBy);
     const {
         getTableProps,
         getTableBodyProps,
@@ -76,10 +78,11 @@ function HealthStatus() {
                 <tr {...headerGroup.getHeaderGroupProps()}>
                 {
                     headerGroup.headers.map(column => (
-                    <th {...column.getHeaderProps()}>
-                        {
-                        column.render('Header')
-                        }
+                    <th {...column.getHeaderProps(column.getSortByToggleProps())}>
+                        {column.render('Header')}
+                        <span>
+                            {column.isSorted ? (column.isSortedDesc ? (<MdExpandMore/>): (<MdExpandLess/>)):(<BiSort/>) }
+                        </span>
                     </th>
                     ))
                 }
