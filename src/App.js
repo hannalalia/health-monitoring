@@ -7,6 +7,7 @@ import { Container } from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ExposureReports from './components/ExposureReports';
 import RTPCRTest from './components/RTPCRTest';
+import Error from './components/Error';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
             </Route>
             <Route exact path="/Tests">
               <RTPCRTest></RTPCRTest>
+            </Route>
+            <Route>
+              <Error></Error>
             </Route>
           </Switch>
         </Router>     
