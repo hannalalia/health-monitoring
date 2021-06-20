@@ -13,7 +13,7 @@ function Dashboard(){
                             <Card.Text align="center">
                             Employee Description
                             </Card.Text>
-                            <Button variant="success w-100 mb-2">Add Entry</Button>
+                            <a className="btn btn-success w-100 mb-2" href="https://ee.kobotoolbox.org/x/YqSOoDyT">Add Entry</a>
                             <Button variant="danger w-100">Covid-19 Infection History</Button>
                         </Card.Body>
                     </Card>
