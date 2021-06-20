@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ExposureReports from './components/ExposureReports';
 import RTPCRTest from './components/RTPCRTest';
 import Error from './components/Error';
+import TravelReports from './components/TravelReports';
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
             </Route>
             <Route exact path="/Health">
               <HealthStatus></HealthStatus>
+            </Route>
+            <Route exact path="/Travel">
+              <TravelReports></TravelReports>
             </Route>
             <Route exact path="/Exposure">
               <ExposureReports></ExposureReports>
