@@ -9,21 +9,7 @@ function ExposureReports()
 {
     const data = useMemo(
         () => [
-            {
-                "id": 1,
-                "date": "June 17, 2021",
-                "location":"UPCO Home",
-                "reason": "Tagged as identified close contact",
-                "status":"For validation"
-                
-            },
-            {
-                "id": 2,
-                "date": "June 16, 2021",
-                "location":"UPCO Home",
-                "reason":"Face-to-face encounter or direct contact with a confirmed Covid-19 case",
-                "status":"Validated"
-            }
+           
         ],
         []
       )
@@ -31,20 +17,28 @@ function ExposureReports()
       const columns = useMemo(
         () => [
           {
-            Header: 'Report Date',
-            accessor: 'date'
+            Header: 'Name',
+            accessor: 'name'
+          },
+          {
+            Header: 'Swabbed Date',
+            accessor: 'swabbedDate',
           },
           {
             Header: 'Location',
             accessor: 'location',
           },
           {
-            Header: 'Reason',
+            Header: 'Reason for Test',
             accessor: 'reason',
           },
           {
-            Header: 'Report Status',
-            accessor: 'status',
+            Header: 'Result',
+            accessor: 'result',
+          },
+          {
+            Header: 'Result Date',
+            accessor: 'resultDate',
           }
         ],
         []
