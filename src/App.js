@@ -24,7 +24,7 @@ function App() {
             <Route exact path="/Exposure">
               <ExposureReports></ExposureReports>
             </Route>
-            <Route exact path="Tests">
+            <Route exact path="/Tests">
               <RTPCRTest></RTPCRTest>
             </Route>
           </Switch>
