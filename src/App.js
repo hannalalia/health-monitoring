@@ -6,6 +6,7 @@ import HealthStatus from './components/HealthStatus';
 import { Container } from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import ExposureReports from './components/ExposureReports';
+import RTPCRTest from './components/RTPCRTest';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
             </Route>
             <Route exact path="/Reports">
               <ExposureReports></ExposureReports>
+            </Route>
+            <Route>
+              <RTPCRTest></RTPCRTest>
             </Route>
           </Switch>
         </Router>     
