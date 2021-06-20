@@ -5,6 +5,7 @@ import TopNav from './components/TopNav';
 import HealthStatus from './components/HealthStatus';
 import { Container } from 'react-bootstrap';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ExposureReports from './components/ExposureReports';
 
 function App() {
   return (
@@ -17,9 +18,10 @@ function App() {
               <Dashboard></Dashboard>
             </Route>
             <Route exact path="/Health">
-              <HealthStatus>
-                
-              </HealthStatus>
+              <HealthStatus></HealthStatus>
+            </Route>
+            <Route exact path="/Reports">
+              <ExposureReports></ExposureReports>
             </Route>
           </Switch>
         </Router>     
