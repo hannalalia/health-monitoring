@@ -9,6 +9,7 @@ import ExposureReports from './components/ExposureReports';
 import RTPCRTest from './components/RTPCRTest';
 import Error from './components/Error';
 import TravelReports from './components/TravelReports';
+import Login from './components/Login'
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
             </Route>
             <Route exact path="/Tests">
               <RTPCRTest></RTPCRTest>
+            </Route>
+            <Route exact path="/Login">
+              <Login></Login>
             </Route>
             <Route>
               <Error></Error>
