@@ -10,7 +10,8 @@ function TopNav(){
         <Nav className="mr-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/Health">Health Status</Nav.Link>
-            <Nav.Link href="/Reports">Exposure Reports</Nav.Link>
+            <Nav.Link href="/Exposure">Exposure Reports</Nav.Link>
+            <Nav.Link href="/Travel">Travel Reports</Nav.Link>
             <Nav.Link href="/Tests">RT PCR Tests</Nav.Link>
             
         </Nav>         

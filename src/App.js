@@ -21,10 +21,10 @@ function App() {
             <Route exact path="/Health">
               <HealthStatus></HealthStatus>
             </Route>
-            <Route exact path="/Reports">
+            <Route exact path="/Exposure">
               <ExposureReports></ExposureReports>
             </Route>
-            <Route>
+            <Route exact path="Tests">
               <RTPCRTest></RTPCRTest>
             </Route>
           </Switch>
