@@ -9,7 +9,7 @@ import ExposureReports from './components/ExposureReports';
 import RTPCRTest from './components/RTPCRTest';
 import Error from './components/Error';
 import TravelReports from './components/TravelReports';
-import Login from './components/Login'
+import Login from './components/Login';
 
 function App() {
   return (

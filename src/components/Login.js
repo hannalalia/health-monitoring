@@ -14,7 +14,7 @@ function Login(){
                     <Form.Control type="password" placeholder="Password"></Form.Control>
                 </Form.Group>
                 <div className="d-flex flex-column flex-md-row justify-content-between">
-                    <Button variant="success">Sign In</Button> 
+                    <Button variant="success" type="submit">Sign In</Button> 
                     <Form.Check type="checkbox" label="Forgot Password" /> 
                 </div>
                              
