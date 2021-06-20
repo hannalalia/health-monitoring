@@ -5,7 +5,7 @@ import { MdExpandMore,MdExpandLess } from "react-icons/md";
 import { BiSort } from "react-icons/bi";
 import GlobalFilter from './GlobalFilter';
 
-function ExposureReports() 
+function RTPCRTest() 
 {
     const data = useMemo(
         () => [
@@ -144,4 +144,4 @@ function ExposureReports()
     );
 }
  
-export default ExposureReports;
+export default RTPCRTest;
