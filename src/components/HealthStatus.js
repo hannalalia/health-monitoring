@@ -264,10 +264,9 @@ function HealthStatus() {
             </tbody>
         </Table>
         <div className="d-flex justify-content-between">
-            <span>
-                Page{' '}
-                    {pageIndex + 1} of {pageOptions.length}
-            </span>  
+                {pageOptions.length>0 ?
+                    (<span>Page{' '} {pageIndex + 1} of {pageOptions.length}</span>) :  (<span>Page 0 of 0 </span>)
+                } 
             <div>
                 <Button variant="info mx-2" size="sm" onClick={()=>gotoPage(0)} disabled={!canPreviousPage}>{'First'}</Button>
                     {   
