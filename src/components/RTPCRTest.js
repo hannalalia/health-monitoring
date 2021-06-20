@@ -64,7 +64,7 @@ function RTPCRTest()
 
     return ( 
         <div>       
-        <h3 className="my-3">List of Daily Health Status</h3>
+        <h3 className="my-3">RT-PCR Report</h3>
         <div className="mx-2 row justify-content-between">
             <Form.Control as="select" className="my-2 col-12 col-sm-3" value={pageSize} onChange={(e)=>setPageSize(Number(e.target.value))}>
             {
