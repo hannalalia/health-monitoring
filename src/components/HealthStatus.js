@@ -240,26 +240,28 @@ function HealthStatus() {
                 ))
             }
             </thead>
-            <tbody  {...getTableBodyProps()}>
+            <tbody  {...getTableBodyProps()}>           
             {
-                page.map(row => {
-                    prepareRow(row)
-                    return (
-                    <tr {...row.getRowProps()}>
-                        {
-                            row.cells.map(cell => {
-                            return (
-                                <td {...cell.getCellProps()}>
-                                {
-                                cell.render('Cell')
-                                }
-                                </td>
-                            )
-                            })
-                        }
-                    </tr>
-                    )
-                })
+                page.length>0? (
+                    page.map(row => {
+                        prepareRow(row)
+                        return (
+                        <tr {...row.getRowProps()}>
+                            {
+                                row.cells.map(cell => {
+                                return (
+                                    <td {...cell.getCellProps()}>
+                                    {
+                                    cell.render('Cell')
+                                    }
+                                    </td>
+                                )
+                                })
+                            }
+                        </tr>
+                        )
+                    })
+                ): (<tr><td colSpan="100%" className="text-center">No records to display.</td></tr>)
             }            
             </tbody>
         </Table>
