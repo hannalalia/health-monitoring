@@ -14,7 +14,7 @@ function Login(){
                     <Form.Control type="password" placeholder="Password"></Form.Control>
                 </Form.Group>
                 <div className="d-flex flex-column flex-md-row justify-content-between">
-                    <Button variant="success" type="submit">Sign In</Button> 
+                    <Form.Control className="btn btn-success w-auto" type="submit" value="Sign In"></Form.Control> 
                     <a href="/Reset" className="text-muted">Forgot Password</a> 
                 </div>
                              
