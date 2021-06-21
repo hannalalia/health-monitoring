@@ -21,7 +21,10 @@ function App() {
           <Switch>   
             <Route exact path="/Login">
               <Login></Login>
-            </Route>    
+            </Route>  
+            <Route exact path="/Reset">
+                <ResetPassword></ResetPassword>
+            </Route>  
             <div>
               <TopNav></TopNav>
               <Route exact path="/">
@@ -39,9 +42,7 @@ function App() {
               <Route exact path="/Tests">
                 <RTPCRTest></RTPCRTest>
               </Route>    
-              <Route exact path="/Reset">
-                <ResetPassword></ResetPassword>
-              </Route>     
+                  
               <Route exact path="/Password">
                 <DBChangePassword></DBChangePassword>
               </Route>         
