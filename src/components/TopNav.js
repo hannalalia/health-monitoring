@@ -17,7 +17,7 @@ function TopNav(){
         </Nav>         
         <Nav>
             <NavDropdown title="Employee Name" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/Profile">Change Password</NavDropdown.Item>
+                <NavDropdown.Item href="/Password">Change Password</NavDropdown.Item>
                 <NavDropdown.Item href="/Login">Logout</NavDropdown.Item>
             </NavDropdown>
         </Nav>

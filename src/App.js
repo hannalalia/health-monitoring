@@ -12,6 +12,7 @@ import Dashboard from './components/Dashboard';
 import TopNav from './components/TopNav';
 import HealthStatus from './components/HealthStatus';
 import ResetPassword from './components/ResetPassword';
+import DBChangePassword from './components/DBChangePassword';
 function App() {
   return (
     <div className="App">
@@ -40,7 +41,10 @@ function App() {
               </Route>    
               <Route exact path="/Reset">
                 <ResetPassword></ResetPassword>
-              </Route>              
+              </Route>     
+              <Route exact path="/Password">
+                <DBChangePassword></DBChangePassword>
+              </Route>         
             </div>
             <Route>
               <Error></Error>
