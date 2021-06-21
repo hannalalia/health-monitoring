@@ -176,7 +176,7 @@ function HealthStatus() {
           {
             Header: 'Fever',
             accessor: 'fever',
-            disableFilters: true,
+            disableGlobalFilter: true,
             disableSortBy: true,
             Cell:({value})=>{
                 return value ? "Yes":"No"
