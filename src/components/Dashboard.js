@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button, Card, Row, Col, Table, Badge, Accordion} from 'react-bootstrap';
+import {BiCalendar, BiHealth} from "react-icons/bi";
 
 function Dashboard(){
     return(
@@ -13,8 +14,8 @@ function Dashboard(){
                             <Card.Text align="center">
                             Employee Description
                             </Card.Text>
-                            <a className="btn btn-success w-100 mb-2" href="https://ee.kobotoolbox.org/x/YqSOoDyT">Add Entry</a>
-                            <Button variant="danger w-100">Covid-19 Infection History</Button>
+                            <a className="btn btn-success w-100 mb-2 d-flex align-items-center justify-content-center" href="https://ee.kobotoolbox.org/x/YqSOoDyT"><BiHealth className="mr-1"></BiHealth>Add Entry</a>
+                            <Button variant="danger w-100 d-flex align-items-center justify-content-center"><BiCalendar className="mr-1"></BiCalendar>Covid-19 Infection History</Button>
                         </Card.Body>
                     </Card>
                     <Table>
