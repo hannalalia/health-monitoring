@@ -15,7 +15,7 @@ function Login(){
                 </Form.Group>
                 <div className="d-flex flex-column flex-md-row justify-content-between">
                     <Button variant="success" type="submit">Sign In</Button> 
-                    <Form.Check type="checkbox" label="Forgot Password" /> 
+                    <a href="/Reset" className="text-muted">Forgot Password</a> 
                 </div>
                              
             </Form>
