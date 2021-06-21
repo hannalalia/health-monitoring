@@ -40,11 +40,11 @@ function App() {
               </Route>    
               <Route exact path="/Reset">
                 <ResetPassword></ResetPassword>
-              </Route>   
-              <Route>
-                <Error></Error>
-              </Route>           
+              </Route>              
             </div>
+            <Route>
+              <Error></Error>
+            </Route>
           </Switch>
         </Router>     
       </Container>
