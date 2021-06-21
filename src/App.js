@@ -11,6 +11,7 @@ import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 import TopNav from './components/TopNav';
 import HealthStatus from './components/HealthStatus';
+import ResetPassword from './components/ResetPassword';
 function App() {
   return (
     <div className="App">
@@ -36,7 +37,10 @@ function App() {
               </Route>
               <Route exact path="/Tests">
                 <RTPCRTest></RTPCRTest>
-              </Route>                  
+              </Route>    
+              <Route exact path="/Reset">
+                <ResetPassword></ResetPassword>
+              </Route>              
             </div>
             <Route>
               <Error></Error>
