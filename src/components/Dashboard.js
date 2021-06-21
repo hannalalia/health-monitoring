@@ -1,6 +1,7 @@
 import React from 'react';
 import {Button, Card, Row, Col, Table, Badge, Accordion} from 'react-bootstrap';
 import {BiCalendar, BiHealth} from "react-icons/bi";
+import Notification from './Notification';
 
 function Dashboard(){
     return(
@@ -41,6 +42,11 @@ function Dashboard(){
                     </Table>
                 </Col>
                 <Col>
+                    <Row>
+                        <Col>
+                            <Notification heading="Person Currently in Quarantine" reason="Known Exposure"start="June 16,2021" end="July 10,2021" place="Home Quarantine"></Notification>
+                        </Col>                
+                    </Row>
                     <Row>
                         <Col lg={6} md={12}>
                             <Card className="my-3 bg-success text-light">
